@@ -1,0 +1,12 @@
+# UP  : docker-compose up -d "nombre servicio especifico"
+# DOWN: docker-compose down -v  // (Elimina los volumenes igual para que no existan errores en actualizar los usuario)
+version: '3.3'
+
+services:
+  db:
+    image: "postgres:10.4"
+    environment:
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: example
+    ports:
+      - "5432:5432"
