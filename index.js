@@ -13,10 +13,7 @@ const server = new ApolloServer({
 });
 
 server.applyMiddleware({ app });
-
 app.use(express.static("app/public"));
-
-require('./templates/template')
 
 models.sequelize.sync({ alter: true, force: true }).then(() => {
   app.listen({ port: 4000 }, () => {
