@@ -19,6 +19,7 @@ module.exports =  `
     authors: [Author!]!
   }
   type Mutation {
+    createAuthor(firstName: String!, lastName:String!): Author!
     createPost(title: String, content:String!, authorId: ID!): Post!
     updatePost(id: ID!, title: String, content:String!): [Int!]!
     deletePost(id: ID!): Int!

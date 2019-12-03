@@ -12,6 +12,11 @@ module.exports =  {
       author: (parent, { id }, { db }, info) => db.author.findByPk(id) 
     },
     Mutation: {
+      createAuthor: (parent, { firstName, lastName }, { db }, info) =>
+        db.author.create({
+          firstName: firstName,
+          lastName: lastName
+        }),
       createPost: (parent, { title, content, authorId }, { db }, info) =>
         db.post.create({
           title: title,
