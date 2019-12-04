@@ -1,4 +1,7 @@
 module.exports = {
+    Post:{
+        tags: (parent, args, context, info) => parent.getTags(),
+    },
     Query: {
         getPosts: (parent, args, { models }) => {
             return models.Post.findAll({
@@ -12,10 +15,10 @@ module.exports = {
     Mutation: {
         createPost: (parent, { input }, { models }) => {
             return models.Post.create({ ...input }, {
-                include: [{
+                /*include: [{
                     model: models.Tag,
                     as: 'tags'
-                }]
+                }]*/
             })
         }
     }

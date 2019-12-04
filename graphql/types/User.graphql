@@ -7,11 +7,13 @@ type User{
     active: Boolean!
     createdAt: Datetime!
     updatedAt: Datetime!
-    posts: [Post!]
+    posts: [Post]
 }
 
 type Query{
     getUsers: [User!]
+    getUser(id:UUID): User
+    getUsersAtr(atr:[String]): [User]
 }
 
 type Mutation{

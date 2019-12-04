@@ -5,11 +5,11 @@ type Post{
     slug: String!
     content:String!
     readingTime: String!
-    lenguage: String!
+    language: String!
     published: Boolean!
     createdAt: Datetime!
     updatedAt: Datetime!
-    tags: [Tag!]
+    tags: [Tag]
 }
 
 type Query{

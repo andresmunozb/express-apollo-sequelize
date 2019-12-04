@@ -21,7 +21,7 @@ module.exports = (sequelize, DataTypes) => {
             allowNull: false,
             defaultValue: '3 min'
         },
-        body: {
+        content: {
             type: DataTypes.TEXT,
             allowNull: false
         },
@@ -35,7 +35,8 @@ module.exports = (sequelize, DataTypes) => {
         },
         published: {
             type: DataTypes.BOOLEAN,
-            allowNull: false
+            allowNull: false,
+            defaultValue: false
         }
 
     },
